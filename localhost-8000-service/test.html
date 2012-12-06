@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>test</title>
+	<script type="text/javascript">
+	  window.onerror = function(message, uri, line) {
+	    console.log('inline listener');
+	    console.log(message);
+	    console.log(uri);
+	    console.log(line);
+	  };
+	</script>
+  <script crossorigin="use-credentials" src="http://localhost:8000/fail.js"></script>
+  <script crossorigin="use-credentials" src="http://localhost:8008/fail.js"></script>
+
+  <script crossorigin="use-credentials" src="http://localhost:8000/listener.js"></script>
+  <script crossorigin="use-credentials" src="http://localhost:8000/fail.js"></script>
+  <script crossorigin="use-credentials" src="http://localhost:8008/fail.js"></script>
+
+  <script crossorigin="use-credentials" src="http://localhost:8008/listener.js"></script>
+  <script crossorigin="use-credentials" src="http://localhost:8000/fail.js"></script>
+  <script crossorigin="use-credentials" src="http://localhost:8008/fail.js"></script>
+</head>
+
+<body>
+
+
+</body>
+</html>
